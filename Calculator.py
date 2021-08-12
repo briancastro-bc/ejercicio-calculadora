@@ -5,9 +5,9 @@ class Calculator:
         num2 = float(input("Número 2: "))
         response = input("¿Qué operacion quiere hacer? ").lower()
         if(response == "suma"):
-            Calculator.Sum()
+            print(Calculator.Sum(num1,num2))
         elif(response == "resta"):
-            Calculator.Substract()
+            print(Calculator.Substract(num1,num2))
         elif(response == "multiplicacion"):
             print(Calculator.Multiply(num1,num2))
         elif(response == "division"):
@@ -16,12 +16,14 @@ class Calculator:
             print("Respuesta inválida")
 
     @staticmethod
-    def Sum(x: float, y: float):
-        pass
+    def Sum(num1, num2):
+        resultado = num1 + num2 
+        return resultado
 
     @staticmethod
-    def Substract(x: float, y: float):
-        pass
+    def Substract(num1, num2):
+        resultado = num1 - num2 
+        return resultado
 
     @staticmethod
     def Multiply(x: float, y: float):
