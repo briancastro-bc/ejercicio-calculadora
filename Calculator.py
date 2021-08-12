@@ -9,9 +9,9 @@ class Calculator:
         elif(response == "resta"):
             Calculator.Substract()
         elif(response == "multiplicacion"):
-            Calculator.Multiply()
+            print(Calculator.Multiply(num1,num2))
         elif(response == "division"):
-            Calculator.Division()
+            print(Calculator.Division(num1,num2))
         else:
             print("Respuesta inválida")
 
@@ -24,9 +24,13 @@ class Calculator:
         pass
 
     @staticmethod
-    def Multiply():
-        pass
+    def Multiply(x: float, y: float):
+        resultado = x * y
+        return resultado
 
     @staticmethod
     def Division(x: float, y: float):
-        pass
+        resultado = x / y
+        return resultado
+
+Calculator.Main()
